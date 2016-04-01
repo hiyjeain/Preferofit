@@ -1,3 +1,61 @@
+#Preferofit
+
+A Retrofit-like SharedPreference access library by [HiyJeain](http://blog.hiyjeain.me)
+
+##Usage
+
+###Interface Declaration
+
+	public interface TestService {
+	    @SET("test")
+	    Observable<String> setTest(String value);
+
+	    @GET("test")
+	    Observable<String> getTest(String defaultValue);
+	}
+
+###Interface Creation
+
+    Preferofit preferofit = new Preferofit(getApplication(), "test", MODE_PRIVATE);
+	testService = preferofit.create(TestService.class);
+
+###Use it!
+    testService
+        .setTest(new Date().toString())
+        .subscribe(new Subscriber<String>() {
+              @Override
+              public void onCompleted() {
+                        Toast.makeText(getApplicationContext(), "Get OnCompleted", Toast.LENGTH_SHORT).show();
+              }
+
+              @Override
+              public void onError(Throwable e) {
+                        Toast.makeText(getApplicationContext(), "Get OnError" + e, Toast.LENGTH_SHORT).show();
+              }
+
+              @Override
+              public void onNext(String s) {
+                  Toast.makeText(getApplicationContext(), "Get OnNext" + s, Toast.LENGTH_SHORT).show();
+              }});
+
+    testService
+        .getTest("default Value")
+        .subscribe(new Subscriber<String>() {
+              @Override
+              public void onCompleted() {
+                  Toast.makeText(getApplicationContext(), "Get OnCompleted", Toast.LENGTH_SHORT).show();
+              }
+
+              @Override
+              public void onError(Throwable e) {
+                  Toast.makeText(getApplicationContext(), "Get OnError" + e, Toast.LENGTH_SHORT).show();
+              }
+
+              @Override
+              public void onNext(String s) {
+                  Toast.makeText(getApplicationContext(), "Get OnNext" + s, Toast.LENGTH_SHORT).show();
+              }});
+##License
     Copyright 2016 Hiyjeain
     
     Licensed under the Apache License, Version 2.0 (the "License");
