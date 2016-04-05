@@ -8,7 +8,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
     }
     buildTypes {
         release {
@@ -21,3 +21,7 @@ android {
 dependencies {
     compile "io.reactivex:rxandroid:1.0.1"
 }
+
+apply from: rootProject.file('gradle/jcenter_push.gradle')
+apply from: rootProject.file('gradle/installv1.gradle')
+apply from: rootProject.file('gradle/bintrayv1.gradle')

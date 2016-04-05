@@ -1,0 +1,23 @@
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'preferofit'
+
+    publishedGroupId = 'me.hiyjeain.android'
+    libraryName = 'Preferofit'
+    artifact = 'preferofit'
+
+    libraryDescription = 'A Retrofit-like SharedPreference access library'
+
+    siteUrl = 'https://github.com/nuuneoi/FBLikeAndroid'
+    gitUrl = 'https://github.com/nuuneoi/FBLikeAndroid.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'hiyjeain'
+    developerName = 'Garrett Xu'
+    developerEmail = 'hiyjeain@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
