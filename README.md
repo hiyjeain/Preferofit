@@ -1,5 +1,7 @@
 #Preferofit
 
+[![Build Status](https://travis-ci.org/hiyjeain/Preferofit.svg?branch=master)](https://travis-ci.org/hiyjeain/Preferofit)
+
 A Retrofit-like SharedPreference access library by [HiyJeain](http://blog.hiyjeain.me)
 
 ##Usage
